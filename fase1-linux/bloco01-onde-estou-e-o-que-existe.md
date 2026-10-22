@@ -25,6 +25,8 @@ bruno@bruno-VirtualBox:~$ ls
 ```
 O que significa: mostra os nomes das pastas e arquivos da pasta atual. `'Área de trabalho'` aparece entre aspas porque o nome tem espaço e acento.
 
+![pwd e ls no terminal](prints/bloco01-pwd-ls.png)
+
 ### 3. Mostrar também os ocultos: `ls -a`
 ```
 bruno@bruno-VirtualBox:~$ ls -a
@@ -63,6 +65,8 @@ drwxr-xr-x  2 bruno bruno 4096 Oct 21 14:51  Documentos
 ```
 O que significa: o `-la` junta os ocultos e os detalhes.
 
+![ls -a, ls -l e ls -la no terminal](prints/bloco01-ls-a-l-la.png)
+
 ## Como ler uma linha do `ls -l`
 Exemplo: `drwxr-xr-x 2 bruno bruno 4096 Oct 21 14:51 Documentos`
 
@@ -87,7 +91,3 @@ Nenhum erro neste bloco.
 
 ## O que aprendi
 Neste bloco aprendi a me localizar no terminal. O `pwd` mostra em que pasta eu estou e o `ls` lista o que existe dentro dela. Aprendi que o `ls -a` mostra também os arquivos ocultos (os que começam com ponto), que o `ls -l` mostra os detalhes de cada item e que o `ls -la` junta os dois. Também aprendi a ler as permissões de uma linha do `ls -l`: a primeira letra diz se é pasta ou arquivo, e as letras `r`, `w` e `x` mostram quem pode ler, escrever e executar.
-
-## Prints
-- `prints/bloco01-pwd-ls.png`
-- `prints/bloco01-ls-a-l-la.png`
