@@ -3,7 +3,7 @@
 Esse repositório é onde documento, passo a passo, o que estou praticando no meu laboratório próprio, para me preparar para vagas de suporte N1, help desk e service desk.
 
 ## Sobre mim
-Sou estudante de Análise e Desenvolvimento de Sistemas na Fametro do , tenho experiência em suporte de TI em clínicas, e estou montando um laboratório para praticar o que as vagas pedem na área de tecnologia.)
+Sou estudante de Análise e Desenvolvimento de Sistemas na Fametro do , tenho experiência em suporte de TI em clínicas, e estou montando um laboratório para praticar o que as vagas pedem na área de tecnologia.
 
 ## Como o laboratório funciona:
 - Notebook com Windows 11
