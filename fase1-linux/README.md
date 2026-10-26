@@ -6,7 +6,7 @@ Prática dos comandos e tarefas do dia a dia de um suporte N1 em Linux, em uma m
 |---|---|---|---|
 | 1 | Onde estou e o que existe | Localizar arquivos e pastas | [bloco01](bloco01-onde-estou-e-o-que-existe.md) |
 | 2 | Criar, copiar, mover e apagar | Organização e manutenção de arquivos | [bloco02](bloco02-criar-copiar-mover-apagar.md) |
-| 3 | Usuários, grupos e permissões | Criar usuário, redefinir senha, dar e tirar acesso | a fazer |
+| 3 | Usuários, grupos e permissões | Criar usuário, redefinir senha, dar e tirar acesso | [bloco03](bloco03-usuarios-grupos-e-permissoes.md) |
 | 4 | Programas, processos e serviços | Instalar software, encerrar programa travado | a fazer |
 | 5 | Rede | Diagnóstico de "sem internet" | a fazer |
 | 6 | Logs | Achar a causa de uma falha | a fazer |
