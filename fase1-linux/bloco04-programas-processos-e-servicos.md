@@ -1,7 +1,7 @@
 # Bloco 4: Programas, processos e serviços
 
 ## Objetivo
-Praticar três tarefas comuns de um suporte N1: instalar e remover programas, encontrar e encerrar um programa que está rodando, e acompanhar o que o sistema está usando.
+Praticar três tarefas comuns de um suporte N1: instalar e remover programas, encontrar e encerrar um programa que está rodando, e ver e controlar os serviços do sistema.
 
 ## Ambiente
 - Ubuntu em uma máquina virtual (VirtualBox) no Windows 11
@@ -70,7 +70,34 @@ Observações:
 - Se o `kill` normal não encerrasse o processo, a opção seria `kill -9 PID`, que força o encerramento. É o último recurso, porque o programa não tem chance de salvar nada.
 
 ## Parte C: serviços
-Em andamento.
+
+Um **serviço** é um programa que roda em segundo plano o tempo todo. No Ubuntu, quem controla os serviços é o `systemctl`. Treinei com o `cron`, que é o agendador de tarefas do sistema. Não usei o serviço `ssh`, porque eu estava conectado por ele e perderia o acesso.
+
+```
+systemctl status cron --no-pager
+sudo systemctl stop cron
+systemctl is-active cron
+sudo systemctl restart cron
+systemctl is-active cron
+systemctl is-enabled cron
+```
+
+![Serviços: status, stop, restart e enabled](prints/bloco04-c-servicos.png)
+
+| Comando | O que faz | O que apareceu |
+|---|---|---|
+| `systemctl status cron --no-pager` | mostra o estado do serviço | `active (running)`, o PID principal 784 e `enabled`, além das últimas linhas do log com o `cron` executando tarefas agendadas |
+| `sudo systemctl stop cron` | para o serviço | o terminal pediu a senha do `sudo` e não mostrou mais nada (silêncio, deu certo) |
+| `systemctl is-active cron` | responde se o serviço está ativo | `inactive` |
+| `sudo systemctl restart cron` | desliga e liga o serviço | nada (silêncio) |
+| `systemctl is-active cron` (de novo) | confere se voltou | `active` |
+| `systemctl is-enabled cron` | mostra se o serviço inicia sozinho com a máquina | `enabled` |
+
+Observações:
+- O `restart` serve também para um serviço parado: ele o liga de novo. Por isso, depois do `stop`, o `restart` foi suficiente para voltar.
+- O `systemctl status` mostra três coisas importantes: se o serviço está rodando (`Active`), se ele inicia sozinho (`enabled`) e o log recente do que ele fez.
+- Se um serviço parar, o caminho do suporte é: ver o `status`, tentar o `restart` e conferir de novo com o `is-active`.
+- Parar o serviço errado pode derrubar o acesso. Por isso evitei o `ssh` e usei o `cron`.
 
 ## O que entendi
 - O `apt` instala, atualiza a lista e remove programas, e precisa de `sudo`.
@@ -78,9 +105,10 @@ Em andamento.
 - Todo programa rodando é um processo com um PID, e com o PID eu consigo encerrá-lo com o `kill`.
 - O `ps` lista processos, o `grep` filtra e o `top` acompanha em tempo real o que está usando CPU e memória.
 - Isso é o equivalente ao "Gerenciador de Tarefas" do Windows.
+- Serviço é um programa que roda sempre em segundo plano. O `systemctl` mostra o estado (`status`), liga (`start`), desliga (`stop`) e reinicia (`restart`) um serviço, e o `is-enabled` diz se ele inicia sozinho.
 
 ## Erros que apareceram e como resolvi
 Nenhum erro nestas duas partes.
 
 ## O que aprendi
-Neste bloco aprendi a instalar e remover programas com o `apt`, vendo que o `update` só atualiza a lista e que o `install` e o `remove` fazem o trabalho. Aprendi também que todo programa rodando é um processo com um número (PID), e que com esse número eu consigo encontrar e encerrar um programa travado usando o `ps`, o `grep` e o `kill`. Vi com o `top` como acompanhar o uso de CPU e de memória do sistema. É o que um suporte N1 faz quando um usuário diz que um programa travou ou que a máquina está lenta.
+Neste bloco aprendi a instalar e remover programas com o `apt`, vendo que o `update` só atualiza a lista e que o `install` e o `remove` fazem o trabalho. Aprendi também que todo programa rodando é um processo com um número (PID), e que com esse número eu consigo encontrar e encerrar um programa travado usando o `ps`, o `grep` e o `kill`. Vi com o `top` como acompanhar o uso de CPU e de memória do sistema. Por fim, aprendi a ver o estado de um serviço e a pará-lo e reiniciá-lo com o `systemctl`, treinando com o `cron` para não derrubar o meu acesso por SSH. É o que um suporte N1 faz quando um usuário diz que um programa travou, que a máquina está lenta ou que um serviço parou.
