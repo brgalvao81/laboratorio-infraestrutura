@@ -8,7 +8,7 @@ Prática dos comandos e tarefas do dia a dia de um suporte N1 em Linux, em uma m
 | 2 | Criar, copiar, mover e apagar | Organização e manutenção de arquivos | [bloco02](bloco02-criar-copiar-mover-apagar.md) |
 | 3 | Usuários, grupos e permissões | Criar usuário, redefinir senha, dar e tirar acesso | [bloco03](bloco03-usuarios-grupos-e-permissoes.md) |
 | 4 | Programas, processos e serviços | Instalar software, encerrar programa travado | [bloco04](bloco04-programas-processos-e-servicos.md) |
-| 5 | Rede | Diagnóstico de "sem internet" | a fazer |
+| 5 | Rede | Diagnóstico de "sem internet" | [bloco05](bloco05-rede-no-linux.md) |
 | 6 | Logs | Achar a causa de uma falha | a fazer |
 | 7 | Backup e restore | Backup, restauração e recuperação de arquivos | a fazer |
 | 8 | SSH | Suporte remoto | a fazer |
