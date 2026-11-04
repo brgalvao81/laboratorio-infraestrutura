@@ -21,7 +21,7 @@ Cada bloco tem um arquivo com: objetivo, comandos usados, resultados, erros que 
 | 1 | Onde estou e o que existe (`pwd`, `ls`) | feito |
 | 2 | Criar, copiar, mover e apagar arquivos | feito |
 | 3 | Usuários, grupos, senhas e permissões | feito |
-| 4 | Programas, processos e serviços | a fazer |
+| 4 | Programas, processos e serviços | feito |
 | 5 | Rede (`ip a`, `ping`, `nslookup`) | a fazer |
 | 6 | Logs do sistema | a fazer |
 | 7 | Backup e restore | a fazer |
