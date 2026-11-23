@@ -23,11 +23,7 @@ Cada bloco tem um arquivo com: objetivo, comandos usados, resultados, erros que 
 | 3 | Usuários, grupos, senhas e permissões | feito |
 | 4 | Programas, processos e serviços | feito |
 | 5 | Rede (`ip a`, `ping`, `nslookup`) | feito |
-| 6 | Logs do sistema | a fazer |
-| 7 | Backup e restore | a fazer |
-| 8 | Acesso remoto por SSH | a fazer |
-| 9 | Firewall e segurança básica | a fazer |
-| 10 | Pasta compartilhada na rede (Samba) | a fazer |
+
 
 Detalhes e links em [fase1-linux](fase1-linux/README.md).
 
