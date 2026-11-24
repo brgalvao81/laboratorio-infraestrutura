@@ -40,22 +40,22 @@ Montar um servidor Windows em uma máquina virtual e transformá-lo em controlad
 ## Etapas e prints
 
 ### 1. Preparação do servidor
-![Gerenciador do Servidor](prints/01-preparacao-servidor.png)
+![Gerenciador do Servidor](Prints/01-preparacao-servidor.png)
 
 No Gerenciador do Servidor (Servidor Local) aparecem o nome do computador `SRV01`, o grupo de trabalho `WORKGROUP` (ainda fora de domínio), a placa de rede com o IP `10.0.2.15` e o sistema Windows Server 2025 Standard Evaluation.
 
 ### 2. Promoção a controlador de domínio
-![Assistente de configuração do AD DS](prints/02-promocao-dominio.png)
+![Assistente de configuração do AD DS](Prints/02-promocao-dominio.png)
 
 No assistente de configuração do AD DS, escolhi **Add a new forest** (adicionar uma nova floresta) e informei o nome do domínio raiz: `empresa.local`.
 
 ### 3. Verificação de pré-requisitos
-![Verificação de pré-requisitos](prints/03-prerequisitos-ad.png)
+![Verificação de pré-requisitos](Prints/03-prerequisitos-ad.png)
 
 O assistente mostrou **All prerequisite checks passed successfully** (todas as verificações passaram) e o botão **Install** liberado. Apareceu também um aviso sobre a delegação de DNS: ele diz que não foi possível criar a delegação porque a zona pai autoritativa não foi encontrada. Esse aviso é normal em um laboratório com um domínio novo e isolado, e o próprio texto diz que nenhuma ação é necessária. Outro aviso informa que o servidor reinicia automaticamente no final da promoção.
 
 ### 4. Login no domínio
-![Login com a conta do domínio](prints/04-login-dominio.png)
+![Login com a conta do domínio](Prints/04-login-dominio.png)
 
 Depois do reinício, a tela de login passou a mostrar **EMPRESA\Administrator**. Isso confirma que o servidor agora faz parte do domínio `empresa.local` como controlador de domínio.
 
